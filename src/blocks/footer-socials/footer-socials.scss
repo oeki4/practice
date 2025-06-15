@@ -1,0 +1,62 @@
+.footer-socials {
+  display: flex;
+  gap: rem(8px);
+
+  @media #{media("<", m)} {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media #{media("<", m)} {
+      display: flex;
+      margin-top: rem(36px);
+    }
+  }
+
+  &__link {
+    border: 2px solid #ECECEC;
+    height: fit-content;
+    cursor: pointer;
+    padding: rem(30px) rem(25px);
+    background-color: #fff;
+    border-radius: rem(16px);
+    transition: $transition;
+
+    @media #{media("<", lg)} {
+      padding: rem(18px) rem(16px);
+      border-radius: rem(8px);
+    }
+
+    &:hover {
+      background-color: #364A46;
+
+      path {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+
+    &:active {
+      background-color: #4E635F;
+
+      path {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+  }
+
+  &__icon {
+    height: rem(20px);
+
+    @media #{media("<", lg)} {
+      height: rem(16px);
+    }
+    path {
+      stroke: #364A46;
+      fill: #364A46;
+    }
+  }
+}

@@ -9,10 +9,76 @@ block content
     +breadcrumbs
     h1.title.title--mt24 Контакты
     .contacts
-      .contacts__card
+      .contacts__card.contacts__card--first
         h2.contacts__title Секретарь
         p.contacts__desc Как стать умнее или избавиться от йододефицита
-      .contacts__card
+        div
+          a.contact-way(href="tel:78124485465").contact-way--mb-12
+            +callphone.contact-way__icon.contact-way__icon--first
+            p.contact-way__text 8 812 448-54-65
+          a.contact-way(href="mailto:help_gendir@lekker.ru")
+            +sendmail.contact-way__icon.contact-way__icon--first
+            p.contact-way__text help_gendir@lekker.ru
+      .contacts__card.contacts__card--second
         h2.contacts__title Отдел продаж
-      .contacts__card
+        p.contacts__desc
+        div
+          a.contact-way(href="tel:88127027262").contact-way--mb-12
+            +callphone.contact-way__icon.contact-way__icon--second
+            p.contact-way__text 8 812 702-72-62
+          a.contact-way(href="mailto:prodazha@lekker.ru")
+            +sendmail.contact-way__icon.contact-way__icon--second
+            p.contact-way__text prodazha@lekker.ru
+      .contacts__card.contacts__card--third.contact-way__icon--third
         h2.contacts__title Отдел рекламы
+        p.contacts__desc
+        div
+          a.contact-way(href="mailto:reklama@lekker.ru")
+            +sendmail.contact-way__icon
+            p.contact-way__text reklama@lekker.ru
+    .socials
+      h3.socials__title Мы в социальных сетях
+      .socials__list
+        a.socials__item.socials__item--vk(href="https://vk.com" target="_blank")
+          +vk.socials__icon
+        a.socials__item.socials__item--youtube(href="https://youtube.com" target="_blank")
+          +youtube.socials__icon
+        a.socials__item.socials__item--ok(href="https://ok.ru" target="_blank")
+          +ok.socials__icon
+    .locations
+      .locations__list
+        .locations__item.locations__item--green
+          h4.locations__title Офис
+          p.locations__address 194044, Санкт-петербург, Беловодский переулок, 6
+          p.locations__schedule пн-пт: 9–17:30
+        .locations__item.locations__item--blue
+          h4.locations__title Производство
+          p.locations__address 194044, Санкт-Петербург, пер. Зеленков, 6, лит. А, корп. 1, пом. 11
+          p.locations__schedule пн-пт: 9–17:30
+      .locations__map
+        +picture("map.webp", false)
+    .contact-us
+      .contact-us__left
+        +picture("feather.webp", false)
+      form.contact-form
+        h5.contact-form__title Связаться с нами
+          +picture("group.webp", false)
+        .contact-us-input-block
+          label.contact-us-input-block__label(for="name") Ваше имя
+          input.contact-us-input-block__input(placeholder="" id="name" type="text")
+        .contact-us-input-block
+          label.contact-us-input-block__label(for="email") E-mail
+          input.contact-us-input-block__input(placeholder="" id="email" type="email")
+        .contact-us-input-block
+          label.contact-us-input-block__label(for="tel") Телефон
+          input.contact-us-input-block__input(placeholder="" id="tel" type="tel")
+        .contact-us-input-block
+          label.contact-us-input-block__label(for="msg") Сообщение
+          textarea.contact-us-input-block__input(placeholder="" id="msg" rows="6")
+        .privacy-block
+          .contact-form__privacy
+            p.contact-form__privacy Нажимая на кнопку «Отправить» я даю согласие на условия
+              a.contact-form__privacy--link(href="/") политики в отношении обработки персональных данных
+          button.primary-btn.primary-btn--contact-form Отправить
+      .contact-us__right
+        +picture("hearth.webp", false)

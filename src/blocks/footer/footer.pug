@@ -1,3 +1,41 @@
-.footer
-  .inner
-    p  Footer
+footer
+  .footer-wrapper
+    .footer
+      .footer-row
+        .logo-block
+          .logo-block__logo
+            +picture("gray-logo.webp", false)
+          .guy-img
+            +picture("guy.webp", false)
+        .footer-menu-block
+          ul.footer-menu-list
+            li.footer-menu-list__item
+              a.footer-menu-list__link(href="/") О компании
+            li.footer-menu-list__item
+              a.footer-menu-list__link(href="/") Новости
+            li.footer-menu-list__item
+              a.footer-menu-list__link(href="/") Контакты
+            li.footer-menu-list__item
+              a.footer-menu-list__link(href="/") Где купить
+          .footer-contacts-block.footer-contacts-block--mobile
+            a.footer-contacts-block__link(href="tel:88124485465") 8 812 448-54-65
+            a.footer-contacts-block__link(href="mailto:info@lekker.ru") info@lekker.ru
+        .footer-contacts-block
+          a.footer-contacts-block__link(href="tel:88124485465") 8 812 448-54-65
+          a.footer-contacts-block__link.footer-contacts-block__link--mb(href="mailto:info@lekker.ru") info@lekker.ru
+          +footer-socials
+        .stay-partner-block
+          .guy-img.guy-img--mobile
+            +picture("guy.webp", false)
+          button.primary-btn.primary-btn--partner Стать партнёром
+      .footer-row
+        +footer-socials.footer-socials--mobile
+      .footer-row.footer-row--mt60.footer-row--col
+        .copyright-privacy
+          p.copyright-privacy__copyright © 2002-2023 ООО «Леккер»
+          a.copyright-privacy__privacy(href="/") Политика в отношении обработки персональных данных
+        .made-in
+          p.made-in Сделано в&nbsp;
+            span.made-in--name CloudMill
+  .contraindications
+    p.contraindications__text ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ СО СПЕЦИАЛИСТОМ

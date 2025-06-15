@@ -55,6 +55,16 @@
     }
   }
 
+  &--partner {
+    padding: rem(25px) rem(32px);
+    white-space: nowrap;
+
+    @media #{media("<", m)} {
+      padding: rem(16px) rem(24px);
+      font-size: rem(13px);
+    }
+  }
+
   &--burger {
     height: 100%;
     padding: 0 rem(10px);
@@ -62,6 +72,17 @@
 
     @media #{media("<", s)} {
       display: block;
+    }
+  }
+
+  &--contact-form {
+    padding: rem(25px) rem(118px);
+
+    @media #{media("<", lg)} {
+      padding: rem(16px) 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
