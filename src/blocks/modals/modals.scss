@@ -326,8 +326,14 @@
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
+  transition: $transition;
+
   @media #{media("<", m)} {
     font-size: rem(14px);
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   &--full-width {
@@ -342,6 +348,11 @@
   text-decoration: underline;
   line-height: 1.4;
   color: #1D3C85;
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media #{media("<", m)} {
     font-size: rem(12px);
@@ -357,6 +368,11 @@
   background: #fff;
   text-transform: uppercase;
   border: 1px solid #E0E0E0;
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media #{media("<", m)} {
     font-size: rem(14px);
@@ -388,6 +404,11 @@
   display: flex;
   align-items: center;
   gap: rem(8px);
+  transition: $transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media #{media("<", m)} {
     font-size: rem(10px);
