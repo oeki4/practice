@@ -1,0 +1,147 @@
+.header-wrapper {
+  padding: rem(24px);
+
+
+  @media #{media("<", m)} {
+    padding: rem(12px);
+  }
+}
+
+.header {
+  width: 100%;
+  box-shadow: 14px 24px 24px 0 rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(24px);
+  height: rem(90px);
+  outline: 2px solid #F0F0F0;
+  border-radius: rem(20px);
+  padding: rem(8px) rem(8px) rem(8px) rem(32px);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @media #{media("<")} {
+    height: rem(60px);
+  }
+
+  @media #{media("<", s)} {
+    padding: rem(8px) rem(8px) rem(8px) rem(8px);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tel {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: rem(18px);
+    color: #364A46;
+    text-decoration: none;
+    height: min-content;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    margin-top: rem(6px);
+
+    &:hover {
+      border-bottom-color: #364A46;
+    }
+
+    @media #{media("<")} {
+      display: none;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  gap: rem(4px);
+
+  &__btn {
+    background-color: #F3F3F3;
+    height: 100%;
+    width: rem(74px);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: rem(16px);
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    svg {
+      width: rem(24px);
+      @media #{media("<", m)} {
+        width: rem(16px);
+      }
+    }
+
+    @media #{media("<")} {
+      width: rem(44px);
+      border-radius: rem(8px);
+    }
+
+    &--tel {
+      display: none;
+      @media #{media("<", m)} {
+        display: block;
+      }
+
+      @media #{media("<", s)} {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+
+  &__list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: rem(18px);
+    color: #364A46;
+    text-decoration: none;
+  }
+
+  @media #{media("<")} {
+    display: none;
+  }
+}
+
+.partner-btn {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: rem(18px);
+  background-color: #F3F3F3;
+  height: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: rem(16px);
+  transition: $transition;
+  padding: 0 rem(32px);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media #{media("<"), t} {
+    display: none;
+  }
+}

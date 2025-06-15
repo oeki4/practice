@@ -1,0 +1,77 @@
+.main-wrapper {
+  padding: 0 rem(24px);
+
+
+  @media #{media("<", m)} {
+    padding: 0 rem(12px);
+  }
+}
+
+.title {
+  font-family: 'TT Firs Neue', sans-serif;
+  font-weight: 600;
+  font-size: rem(120px);
+  color: #364A46;
+
+  @media #{media("<", m)} {
+    font-size: rem(48px);
+  }
+
+  &--mt24 {
+    margin-top: rem(24px);
+  }
+}
+
+.contacts {
+  display: flex;
+  gap: rem(24px);
+  flex-wrap: wrap;
+
+  @media #{media("<")} {
+    gap: rem(12px);
+  }
+
+
+  &__card {
+    padding: rem(32px);
+    background-image: url("../../images/first-contact-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: rem(24px);
+    width: 32%;
+
+    @media #{media("<")} {
+      width: 48%;
+    }
+
+    @media #{media("<", s)} {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: 'TT Firs Neue', sans-serif;
+    font-weight: 600;
+    font-size: rem(32px);
+    color: #364A46;
+
+    @media #{media("<", m)} {
+      font-size: rem(20px);
+    }
+  }
+
+  &__desc {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: rem(24px);
+    color: #364A46;
+    margin-top: rem(12px);
+    max-width: rem(400px);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+    @media #{media("<", m)} {
+      font-size: rem(16px);
+      margin-top: rem(8px);
+    }
+  }
+}

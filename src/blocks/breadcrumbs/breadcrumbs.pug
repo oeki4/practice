@@ -1,0 +1,10 @@
+mixin breadcrumbs
+  .breadcrumbs
+    ul.breadcrumbs__list
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href="/") Главная
+          +breadcrumb.breadcrumbs__svg
+      li.breadcrumbs__item
+        span.breadcrumbs__link.breadcrumbs__link--active Контакты
+          +breadcrumb.breadcrumbs__svg
+

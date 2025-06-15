@@ -1,0 +1,25 @@
+header.header-wrapper
+  div.header
+    button.primary-btn.primary-btn--burger
+      +burger
+    a.header__logo(href="/")
+      +picture("logo.webp",false)
+    .search
+      button.primary-btn.primary-btn--header Продукция
+        +more
+      button.search__btn
+        +search
+      button.search__btn.search__btn--tel
+        +phone
+    nav.menu
+      ul.menu__list
+        li.menu__item
+          a.menu__link(href="/") О компании
+        li.menu__item
+          a.menu__link(href="/") Новости
+        li.menu__item
+          a.menu__link(href="/") Где купить
+        li.menu__item
+          a.menu__link(href="/") Контакты
+    a.header__tel(href="tel:88124485465") 8 812 448-54-65
+    button.partner-btn Стать партнёром

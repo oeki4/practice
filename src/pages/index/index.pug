@@ -1,0 +1,18 @@
+extends ../../layout/layout
+
+block variables
+  -
+    const pageTitle = 'Index'
+
+block content
+  main.main-wrapper
+    +breadcrumbs
+    h1.title.title--mt24 Контакты
+    .contacts
+      .contacts__card
+        h2.contacts__title Секретарь
+        p.contacts__desc Как стать умнее или избавиться от йододефицита
+      .contacts__card
+        h2.contacts__title Отдел продаж
+      .contacts__card
+        h2.contacts__title Отдел рекламы

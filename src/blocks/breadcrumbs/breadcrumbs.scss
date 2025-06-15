@@ -1,0 +1,49 @@
+.breadcrumbs {
+  display: flex;
+
+  &__list {
+    display: flex;
+    gap: rem(31px);
+
+    @media #{media("<", m)} {
+      gap: rem(10px);
+    }
+  }
+
+  &__link {
+    font-family: 'TT Firs Neue', sans-serif;
+    font-weight: 600;
+    font-size: rem(16px);
+    color: #364A46;
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+    transition: $transition;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media #{media("<", m)} {
+      font-size: rem(10px);
+    }
+
+    &:hover {
+      color: #00AA88;
+
+      svg path {
+        stroke: #00AA88;
+      }
+    }
+
+    &--active {
+      color: #00AA88;
+
+      svg {
+        transform: rotate(-90deg);
+
+        path {
+          stroke: #00AA88;
+        }
+      }
+    }
+  }
+}

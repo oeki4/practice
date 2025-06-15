@@ -1,0 +1,139 @@
+
+mixin response-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--response
+        .modal__test
+          |CONTENT
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
+
+mixin test-modal
+  .modal(id='test-modal')
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper
+        .modal__test
+          |CONTENT
+        .modal__close(data-modal-close='')
+          +reset.modal__svg
+
+mixin empty-modal
+  .modal(id='default-modal')
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+
+
+mixin dealer-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--dealer
+        h1.modal__title кабинет дилера
+        p.modal__desc.modal__desc--mb Для получения данных входа обратитесь к своему персональному менеджеру.
+        .form
+          .input-block
+            .input-block__form
+              label.input-block__label(for="telephone") Телефон
+                span *
+              input.input-block__input(id="telephone", type="tel", placeholder="")
+            button.input-block__btn
+              +reset-input
+          .input-block
+            .input-block__form
+              label.input-block__label(for="pass") Пароль
+                span *
+              input.input-block__input(id="pass", type="password", placeholder="")
+            button.input-block__btn
+              +show-input
+          p.form__error Неверный телефон или пароль
+          button.submit-btn Войти
+          a.forgot-password(href="/") Забыли пароль?
+          button.leadership-btn Заявка на лидерство
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
+
+
+mixin telephone-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--dealer
+        h1.modal__title Подтвердите номер телефона
+        p.modal__desc Сейчас вы получите код на номер
+        p.modal__desc.modal__desc--mb + 7 981 ***-**-22
+        .form
+          .input-block
+            .input-block__form
+              label.input-block__label(for="code") Код
+                span *
+              input.input-block__input(id="code", type="text", placeholder="")
+          button.submit-btn Войти
+          p.resend-timer Отправим код повторно через 45 секунд
+          button.resend Не приходит код
+            p.resend__popover ?
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
+        .modal__cross.modal__cross--left.modal__cross-svg--outlined
+          +back.modal__cross-svg
+
+mixin reset-password-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--dealer
+        h1.modal__title Восстановление пароля
+        p.modal__desc.modal__desc--mb Если вы забыли пароль, введите номер телефона
+        .form
+          .input-block
+            .input-block__form
+              label.input-block__label(for="telephone") Телефон
+                span *
+              input.input-block__input(id="telephone", type="tel", placeholder="")
+          p.form__error Профиль пользователя не найден
+          button.submit-btn Далее
+          p.policy Нажимая на кнопку «Отправить», я соглашаюсь на получение информации и уведомлений от интернет-сайта, а также принимаю
+            a.policy__link(href="/") условия политики конфиденциальности.
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
+
+mixin change-password-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--dealer
+        h1.modal__title.modal__title--mb Восстановление пароля
+        .form
+          .input-block
+            .input-block__form
+              label.input-block__label(for="newPassword") Новый пароль
+                span *
+              input.input-block__input(id="newPassword", type="password", placeholder="")
+            button.input-block__btn
+              +show-input
+          .input-block
+            .input-block__form
+              label.input-block__label(for="repeatNewPassword") Повторите новый пароль
+                span *
+              input.input-block__input(id="repeatNewPassword", type="password", placeholder="")
+            button.input-block__btn
+              +show-input
+          button.submit-btn Изменить пароль
+          p.policy Нажимая на кнопку «Отправить», я соглашаюсь на получение информации и уведомлений от интернет-сайта, а также принимаю
+            a.policy__link(href="/") условия политики конфиденциальности.
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
+
+mixin success-modal
+  .modal(id=attributes.id)
+    .modal__overlay(data-modal-close='')
+    .modal__layout(data-modal-layout='')
+      .modal__wrapper.modal__wrapper--dealer
+        .success-img
+          +picture("success.webp",false)
+        h1.modal__title Ваш пароль успешно изменен
+        p.modal__desc.modal__desc--mb Теперь вы можете использовать новый пароль для входа
+        button.submit-btn.submit-btn--full-width хорошо, спасибо
+        .modal__cross.modal__cross-svg--outlined(data-modal-close='')
+          +reset.modal__cross-svg
